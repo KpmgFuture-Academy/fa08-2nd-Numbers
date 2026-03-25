@@ -4,7 +4,7 @@
 > KOSPI200 정기 변경 시점에 편입·편출 예상 종목을 머신러닝으로 사전 예측하는 웹 서비스
 
 <p align="center">
-  <img src="Next200/images/0.png" width="180" alt="Next200 Logo"/>
+  <img src="images/0.png" width="180" alt="Next200 Logo"/>
 </p>
 
 ---
@@ -83,7 +83,7 @@ KOSPI200은 한국 주식시장을 대표하는 지수로, **매 반기(6월·12
 
 ### Data Flow
 
-![Data Flow](Next200/images/9.png)
+![Data Flow](images/9.png)
 
 ### 데이터 커버리지
 
@@ -104,7 +104,7 @@ DART 수집 주요 주주 데이터(`non_float_ratio`, `treasury_shares`, `major
 
 ### Pipeline
 
-![파이프라인 구성](Next200/images/2.png)
+![파이프라인 구성](images/2.png)
 
 ### Baseline 실험 흐름
 
@@ -112,9 +112,9 @@ DART 수집 주요 주주 데이터(`non_float_ratio`, `treasury_shares`, `major
 2. **Rule-based 가중치 모델 (Baseline 2)**: 유동주식비율·시가총액 순위 등 4개 피처 기반 가중치 모델 → ML 대비 성능 열위로 기각
 3. **단일 모델**: 편입·편출을 하나의 스코어링 모델로 통합 → **성능 향상 (17.1% → 39.0%)**
 
-![모델 비교 Baseline + TopN](Next200/images/4.png)
+![모델 비교 Baseline + TopN](images/4.png)
 
-![전체 모델 비교 결과](Next200/images/3.png)
+![전체 모델 비교 결과](images/3.png)
 
 ### 최종 모델 성능
 
@@ -141,7 +141,7 @@ DART 수집 주요 주주 데이터(`non_float_ratio`, `treasury_shares`, `major
 | `foreign_change` | 외국인보유 | 외국인 보유 비율 전기 대비 변화량 |
 | `was_member` | labels | 전기 KOSPI200 구성 여부 (단일 모델 핵심) |
 
-![SHAP 피처 중요도](Next200/images/5.png)
+![SHAP 피처 중요도](images/5.png)
 
 ### 피처 중요도 경제적 해석
 
@@ -154,7 +154,7 @@ DART 수집 주요 주주 데이터(`non_float_ratio`, `treasury_shares`, `major
 
 ## 🏗️ 시스템 아키텍처
 
-![시스템 아키텍처](Next200/images/1.png)
+![시스템 아키텍처](images/1.png)
 
 서비스는 **3가지 케이스**로 작동합니다:
 
@@ -186,7 +186,7 @@ Next200/
 
 ## 🗄️ ERD
 
-![ERD 논리 모델](Next200/images/6.png)
+![ERD 논리 모델](images/6.png)
 
 ### 주요 테이블
 
@@ -208,23 +208,23 @@ Next200/
 
 ### 메인 대시보드 — 편입·편출 예측
 
-![메인 대시보드](Next200/images/12.png)
+![메인 대시보드](images/12.png)
 
 ### 종목 상세 — SHAP 기여도 · 주가 추이 · 관련 뉴스
 
-![종목 상세](Next200/images/14.png)
+![종목 상세](images/14.png)
 
 ### 섹터 비율 분석
 
-![섹터 비율](Next200/images/13.png)
+![섹터 비율](images/13.png)
 
 ### 이메일 구독 알림
 
-![이메일 구독](Next200/images/17.png)
+![이메일 구독](images/17.png)
 
 ### CSV 다운로드
 
-![CSV 다운로드](Next200/images/16.png)
+![CSV 다운로드](images/16.png)
 
 ---
 
@@ -233,7 +233,7 @@ Next200/
 모델이 예측한 **강력 편입 종목**을 매수일(5/1 이후 첫 거래일)에 매수하고
 매도일(6월 둘째 주 금요일)에 매도했을 때의 수익률을 검증합니다.
 
-![H1 강력편입 수익률 분석](Next200/images/11.png)
+![H1 강력편입 수익률 분석](images/11.png)
 
 | 구분 | 평균 수익률 |
 |-----|-----------|
