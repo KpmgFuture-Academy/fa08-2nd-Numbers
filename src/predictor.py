@@ -182,7 +182,7 @@ def run_prediction(
     for feature in missing_features:
         prepared[feature] = 0
 
-    matrix = prepared[features].fillna(0)
+    matrix = prepared[features].fillna(0).apply(pd.to_numeric, errors="coerce").fillna(0)
     scores = model.predict_proba(matrix)[:, 1]
     prepared["score"] = scores
     prepared["score_pct"] = prepared["score"] * 100
